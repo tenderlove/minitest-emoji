@@ -3,7 +3,7 @@ module MiniTest
     VERSION = '1.0.0'
 
     DEFAULT = {
-      '.' => "\u{1f497} ",
+      '.' => "\u{1F49A} ",
       'E' => "\u{1f525} ",
       'F' => "\u{1f4a9} ",
       'S' => "\u{1f633} ",
