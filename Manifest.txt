@@ -7,6 +7,7 @@ lib/minitest/emoji.rb
 lib/minitest/emoji_plugin.rb
 lib/minitest/emoji/themes/default.rb
 lib/minitest/emoji/themes/apples.rb
+lib/minitest/emoji/themes/farm.rb
 lib/minitest/emoji/themes/similies.rb
 lib/minitest/emoji/themes/kitties.rb
 lib/minitest/emoji/themes/hearts.rb
