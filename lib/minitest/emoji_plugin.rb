@@ -6,6 +6,15 @@ module Minitest
     opts.on "-e", "--emoji", "Show Emoji instead of dots" do
       Emoji.emoji!
     end
+    opts.on "-t", "--theme [name]", "Pick an emoji theme" do |name|
+      unless name
+        puts "Choose from these themes:"
+        Emoji.themes.keys.each{|theme| puts "  #{theme}" }
+        puts "...or, 'random' for a random theme"
+        exit 1
+      end
+      Emoji.theme! name
+    end
   end
 
   def self.plugin_emoji_init options # :nodoc:
@@ -22,13 +31,6 @@ module Minitest
 
     VERSION = '1.0.0'
 
-    DEFAULT = {
-      '.' => "\u{1F49A} ",
-      'E' => "\u{1f525} ",
-      'F' => "\u{1f4a9} ",
-      'S' => "\u{1f633} ",
-    }
-
     attr_reader :io, :chars
 
     def self.emoji!
@@ -39,9 +41,32 @@ module Minitest
       @emoji ||= false
     end
 
-    def initialize io, chars = DEFAULT
+    def self.theme! name
+      if name == "random"
+        name = self.themes.keys.sample
+      end
+      unless self.themes.include? name.to_sym
+        puts "Theme #{name} not found."
+        exit 1
+      end
+      @theme ||= self.themes[name.to_sym]
+    end
+
+    def self.theme
+      @theme ||= self.themes[:default]
+    end
+
+    def self.themes
+      @themes ||= {}
+    end
+
+    def self.add_theme name, chars
+      self.themes[name.to_sym] = chars
+    end
+
+    def initialize io
       @io    = io
-      @chars = DEFAULT
+      @chars = self.class.theme
     end
 
     def print o
@@ -54,3 +79,6 @@ module Minitest
     end
   end
 end
+
+# require all the themes
+Dir[File.join(File.dirname(__FILE__), 'emoji', 'themes', '*.rb')].each {|file| require file }
