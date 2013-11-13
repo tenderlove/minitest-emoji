@@ -2,6 +2,7 @@
 CHANGELOG.rdoc
 Manifest.txt
 README.rdoc
+LICENSE.txt
 Rakefile
 lib/minitest/emoji.rb
 lib/minitest/emoji_plugin.rb
