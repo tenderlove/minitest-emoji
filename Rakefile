@@ -13,6 +13,7 @@ Hoe.spec 'minitest-emoji' do
   self.readme_file   = 'README.rdoc'
   self.history_file  = 'CHANGELOG.rdoc'
   self.extra_rdoc_files  = FileList['*.rdoc']
+  self.license "MIT"
 end
 
 # vim: syntax=ruby
