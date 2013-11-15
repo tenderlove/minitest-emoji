@@ -5,4 +5,12 @@ README.rdoc
 Rakefile
 lib/minitest/emoji.rb
 lib/minitest/emoji_plugin.rb
+lib/minitest/emoji/themes/default.rb
+lib/minitest/emoji/themes/apples.rb
+lib/minitest/emoji/themes/farm.rb
+lib/minitest/emoji/themes/smilies.rb
+lib/minitest/emoji/themes/kitties.rb
+lib/minitest/emoji/themes/hearts.rb
+lib/minitest/emoji/themes/weather.rb
+lib/minitest/emoji/themes/xoxo.rb
 test/test_minitest_emoji.rb

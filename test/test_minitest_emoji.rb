@@ -19,4 +19,10 @@ describe 'my amazing tests' do
   it 'skips things!!' do
     skip "don't care!"
   end
+
+  3.times do
+    it "errors" do
+      raise "ru roh"
+    end
+  end
 end
