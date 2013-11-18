@@ -1,3 +1,14 @@
+=== 2.0.0 / 2013-11-18
+
+* 2 major enhancements:
+
+  * Convert to minitest plugin for minitest 5. (sentientmonkey)
+  * Add support for emoji themes! (sentientmonkey/zenspider)
+
+* 1 bug fix:
+
+  * Added explicit MIT license to hoespec.
+
 === 1.0.0 / 2011-11-22
 
 * 1 major enhancement

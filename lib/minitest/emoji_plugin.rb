@@ -30,7 +30,7 @@ module Minitest
 
   class Emoji
 
-    VERSION = '1.0.0'
+    VERSION = '2.0.0'
 
     attr_reader :io, :chars
 
