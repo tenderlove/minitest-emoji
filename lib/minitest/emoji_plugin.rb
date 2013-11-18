@@ -116,6 +116,3 @@ module Minitest
     end
   end
 end
-
-# require all the themes
-Dir[File.join(File.dirname(__FILE__), 'emoji', 'themes', '*.rb')].each {|file| require file }
