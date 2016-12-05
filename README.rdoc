@@ -14,7 +14,7 @@ Print out emoji for your test passes, fails, and skips
 
   require 'minitest/autorun'
   require 'minitest/emoji'
-  
+
   describe 'my amazing tests' do
     # generate many hearts!
     50.times do |i|
@@ -22,14 +22,14 @@ Print out emoji for your test passes, fails, and skips
         100.must_equal 100
       end
     end
-  
+
     # generate some poops!
     2.times do |i|
       it "compares #{i} to #{i + 1}" do
         i.must_equal i + 1
       end
     end
-  
+
     it 'skips things!!' do
       skip "don't care!"
     end
@@ -41,7 +41,23 @@ Print out emoji for your test passes, fails, and skips
 
 == INSTALL:
 
-* gem install minitest-emoji
+<tt>gem install minitest-emoji</tt>
+
+== THEMES:
+
+<tt>ruby test_file.rb --theme <theme name></tt>
+
+* Name | Success | Failure | Skip | Error
+
+* default: 💚 💩 😳 🔥
+* apples: 🍏 🍊 🍋 🍎
+* farm: 🐔 🐮 🐹 🐷
+* smilies: 😍 😱 😜 😡
+* kitties: 😻 🙀 😽 😿
+* hearts: 💚 💛 💙 💔
+* weather: ☀ ⚡ ☁ ☔
+* xoxo: ⭕ ❌ ❓ ⁉
+
 
 == LICENSE:
 
